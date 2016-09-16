@@ -2,7 +2,7 @@
 title: New hello World
 date: "2016-09-01T22:12:03.284Z"
 layout: post
-readNext: "/my-second-post/"
+readNext: "/hi-folks/"
 path: "/hello-world/"
 ---
 
