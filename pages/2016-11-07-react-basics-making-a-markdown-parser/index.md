@@ -12,6 +12,7 @@ If you haven't read [making a clock with React](http://anuragasaurus.com/react-b
 
 So, below is what we will be making. (If the codepen embed doesn't load, try refreshing the page.)
 
+
 <p data-height="265" data-theme-id="0" data-slug-hash="WGBgxQ" data-default-tab="js,result" data-user="anuragasaurus" data-embed-version="2" data-pen-title="React markdown parser" class="codepen">See the Pen <a href="https://codepen.io/anuragasaurus/pen/WGBgxQ/">React markdown parser</a> by anuragasaurus (<a href="http://codepen.io/anuragasaurus">@anuragasaurus</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
@@ -37,3 +38,7 @@ handleChange(e) {
 I am using a mardown parsing library [marked](https://github.com/chjj/marked). As input value changes, I pass the input value in marked function which is exposed by "marked" and store it in the `this.state.parsedValue`.
 
 `componentDidMount` is a react lifecycle function which is run after component is mounted on screen.
+
+### Edit:
+
+I searched for alternative for `dangerouslySetInnerHTML` but couldn't find one. They named it `dangerouslySetInnerHTML` to make developer aware of the risk of XSS attack when they use it. To avoid the risk of XSS attack, we can use `DOMPurify` which sanitizes the html.
